@@ -77,13 +77,24 @@ public class Main {
         return num % 2 == 0;
     }
 
- /*   static void fibonacci(int fibNum) {
+    static int fibonacci(int fibNum) {
+        if (fibNum <= 1) {
+            return fibNum;
+        }
+        else{
 
-        fibonacci(fibNum - 1) + fibonacci(fibNum - 2);
+        return fibonacci(fibNum - 1) + fibonacci(fibNum - 2);
 
             }
         }
-    } */
+
+    static void fib_loop(int fibNum){
+        for(int i = 2; i <= fibNum; i++) {
+            System.out.println(fibonacci(i));
+
+        }
+    }
+
 //I'll try again later
 
     public static void main(String[] args) {
@@ -98,7 +109,7 @@ public class Main {
         userInput();
         typeQuit();
         System.out.println("Is 4 even, True or False? " + isEven(4));
-        //System.out.println(fibonacci(10));
+        fib_loop(10);
 
     }
 }
